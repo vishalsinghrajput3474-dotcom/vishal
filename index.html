@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Secret Access</title>
+
+<style>
+body{
+    margin:0;
+    background:black;
+    font-family:Consolas, monospace;
+    overflow:auto;
+}
+
+.center{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+}
+
+button{
+    padding:15px 40px;
+    font-size:20px;
+    background:#00ff00;
+    border:none;
+    cursor:pointer;
+    border-radius:10px;
+}
+
+#terminal{
+    display:none;
+    color:#00ff00;
+    padding:20px;
+    font-size:22px;
+    white-space:pre-line;
+}
+
+#surprise{
+    display:none;
+    min-height:100vh;
+    text-align:center;
+    padding:30px;
+    background:linear-gradient(135deg,#ff4d6d,#ff8fab);
+    color:white;
+}
+
+h1{
+    font-size:50px;
+}
+
+.message{
+    max-width:900px;
+    margin:auto;
+    font-size:22px;
+    line-height:1.8;
+}
+</style>
+</head>
+<body>
+
+<div class="center" id="start">
+    <h1 style="color:white;">🔐 Private File</h1>
+    <button onclick="startHack()">OPEN</button>
+</div>
+
+<div id="terminal"></div>
+
+<div id="surprise">
+  <img src="pic.jpeg" alt="My special person" style="width:250px; max-width:90%; border-radius:20px; margin:20px auto; display:block;">
+
+<h1>🎂 HAPPY BIRTHDAY BUGGU ❤️</h1>
+
+<div class="message">
+
+<p>
+
+Meri Pyari Buggu ❤️,
+
+Sach bataun to shayad duniya ka sabse lucky insaan main hu kyunki meri zindagi me tum ho. Aaj tumhara birthday hai aur main chahta hu ki tumhari har smile hamesha aisi hi bani rahe.
+
+Tum sirf meri girlfriend nahi ho, tum meri best friend, meri khushi aur meri sabse pasandida aadat ho. Jab bhi main udaas hota hu, tumhari ek choti si baat bhi mera mood theek kar deti hai.
+
+Mera Bachha, tum itni special ho ki kabhi kabhi lagta hai bhagwan ne meri life me sabse khoobsurat gift tumhare roop me bheja hai. Main chahta hu ki aaj ka din tumhare liye utna hi special ho jitni tum meri life ke liye ho.
+
+Aaj ke din bas itna yaad rakhna ki chahe kuch bhi ho jaye, ek pagal sa ladka hamesha tumhari khushi ki dua karta rahega. ❤️
+
+Tumhari hasi meri favourite music hai.
+Tumhari awaaz meri favourite notification hai.
+Aur tum meri favourite person ho. ❤️
+
+Happy Birthday Meri Buggu,
+Happy Birthday Mera Bachha,
+Happy Birthday Meri Jaan. 🎂✨❤️
+
+I Love You Forever And Ever ❤️
+
+</p>
+
+</div>
+
+</div>
+
+<script>
+
+function startHack(){
+
+document.getElementById("start").style.display="none";
+
+let terminal=document.getElementById("terminal");
+terminal.style.display="block";
+
+const lines=[
+"ACCESSING DEVICE...",
+"████ 15%",
+"████████ 35%",
+"████████████ 60%",
+"READING PERSONAL DATA...",
+"FACE DETECTED...",
+"TARGET IDENTIFIED : BUGGU ❤️",
+"DOWNLOADING MEMORIES...",
+"SEARCHING HEART FILES...",
+"LOVE.EXE FOUND ❤️",
+"WARNING !!!",
+"YOUR HEART HAS BEEN STOLEN 😱",
+"HACKER NAME DETECTED...",
+"OWNER'S BF ❤️",
+"LOADING SECRET MESSAGE..."
+];
+
+let i=0;
+
+function type(){
+if(i<lines.length){
+terminal.innerHTML += lines[i] + "\\n";
+i++;
+setTimeout(type,700);
+}
+else{
+setTimeout(()=>{
+terminal.style.display="none";
+document.getElementById("surprise").style.display="block";
+},2000);
+}
+}
+
+type();
+}
+
+</script>
+
+</body>
+</html>
